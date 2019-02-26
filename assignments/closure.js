@@ -1,6 +1,22 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function sun() {
+  console.log('sup');
+  const greeting = 'its getting hot in here';
+  function city() {
+    console.log('im a city');
+    console.log(`i understand that ${greeting}`);
+    function house () {
+      console.log('im a house');
+      console.log(`${greeting} im on fire`);
+    }
+    house();
+  }
+  city ();
+}
+sun();
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 

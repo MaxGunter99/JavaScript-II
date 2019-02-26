@@ -112,7 +112,30 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//if anyone donated more than $200 they will be considered a top donator
+let topDonators = [];
+for (let i = 0; i < runners.length; i++) {
+  var donations =(runners[i].first_name + ' ' + runners[i].last_name + ' ' + runners[i].donation);
+  if (runners[i].donation >= 200) {
+    console.log(runners[i].first_name + ' ' + runners[i].last_name + ' is a top donator with $' + runners[i].donation);
+  }
+};
+console.log(topDonators);
 
 // Problem 2
+//everyone needs to be sorted through before the run starts to fill out their paperwork. here is everyone sorted in alphabetical order.
+
+let sorted = [];
+for (let i = 0; i < runners.length; i++) {
+  sorted.push(runners[i].last_name);
+}
+console.log(sorted.sort());
 
 // Problem 3
+//were going to need to know what shirts to order for the runners. so heres the name of the runner and their shirt size
+
+let sorted = [];
+for (let i = 0; i < runners.length; i++) {
+  sorted.push(runners[i].shirt_size + ' ' + runners[i].first_name);
+}
+console.log(sorted.sort());
